@@ -6,8 +6,8 @@ from math import sqrt
 from multiprocessing import Pool
 
 
-#import pandas as pd
-#import numpy as np
+import pandas as pd
+import numpy as np
 
 def measure(data, pattern, num):
     
@@ -207,23 +207,23 @@ if __name__ == '__main__':
     total=0
     data = file.read()
 
-#    start_time = timer()
-#    for i in range(0,70):
-#     numb()
-#    elapsed_time = timer() - start_time
-#    total+=elapsed_time
-#    print('np:',str(elapsed_time * 1e3))
-    
-#    start_time = timer()
-#    for i in range(0,300):
-#     df = pd.DataFrame([x.split(';') for x in data.split('\n')])
-#     df = pd.concat([df for _ in range(5)])
-#     df=df.drop_duplicates()
-#     df=df.dropna()
-#     df=df.groupby(level=0)
-#    elapsed_time = timer() - start_time
-#    total+=elapsed_time
-#    print('df:',str(elapsed_time * 1e3))
+    start_time = timer()
+    for i in range(0,70):
+     numb()
+    elapsed_time = timer() - start_time
+    total+=elapsed_time
+    print('np:',str(elapsed_time * 1e3))
+   
+    start_time = timer()
+    for i in range(0,300):
+     df = pd.DataFrame([x.split(';') for x in data.split('\n')])
+     df = pd.concat([df for _ in range(5)])
+     df=df.drop_duplicates()
+     df=df.dropna()
+     df=df.groupby(level=0)
+    elapsed_time = timer() - start_time
+    total+=elapsed_time
+    print('df:',str(elapsed_time * 1e3))
     
     
     start_time = timer()
